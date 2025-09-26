@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Aranzáez - Portafolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="profile-info">
+                <h1>Daniel Alfonso Aranzáez Aranzáez</h1>
+                <p>Científico de Datos Júnior | Profesional Proactivo y Analítico</p>
+                <div class="contact-links">
+                    <a href="mailto:da.aranzaez@gmail.com"><i class="fas fa-envelope"></i> da.aranzaez@gmail.com</a>
+                    <a href="tel:+56953518262"><i class="fas fa-phone"></i> +56 9 53518262</a>
+                    <a href="https://www.linkedin.com/in/daniel-aranzaez/" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a>
+                    <a href="https://drive.google.com/file/d/1jGErlMeieL8XndpSzrKSkOVs4hlgsSXe/view?usp=sharing" target="_blank"><i class="fas fa-file-text"></i> Descargar CV</a>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">CV</a></li>
+                <li><a href="certificados-y-cursos.html">Certificados y Cursos</a></li>
+                <li><a href="portafolio.html" class="active">Portafolio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="container">
+
+            <section id="projects" class="section">
+                <h2>Proyectos de Data Science</h2>
+                
+                <div class="project-item">
+                    <h3>Análisis y Predicción de Evasión de Clientes (Churn) para Telecom X </h3>
+                    
+                    <p class="project-context">
+                        Proyecto final del programa <strong>ONE Tech Foundation G8 – Data Science de Alura Latam</strong>. El caso de estudio utiliza datos ficticios de la empresa "Telecom X" para simular un problema real de negocio.
+                    </p>
+                    
+                    <p>
+                        Este proyecto integral de Data Science se centró en la problemática del abandono de clientes (Churn) en la industria de telecomunicaciones. El objetivo fue transformar datos operativos en una ventaja competitiva mediante la identificación de patrones y la creación de un modelo de alerta temprana para la retención.
+                    </p>
+                    
+                    <h4><i class="fas fa-search"></i> Parte I: Adquisición, Limpieza y Análisis Exploratorio (EDA)</h4>
+                    <ul>
+                            <p>
+                                <li>Esta etapa inicial se centró en la preparación rigurosa del dato y el diagnóstico de los factores que impulsan la evasión. Se comenzó con la <strong>Extracción y Lectura de datos</strong>, donde fue crucial la <strong>Normalización del dataset</strong>, utilizando "pd.json_normalize()" para aplanar la estructura de la fuente en formato <strong>JSON</strong> anidado.</li>
+                            </p>
+                            <p>
+                                <li>El proceso de <strong>Limpieza y Transformación de datos</strong> incluyó la <strong>Gestión de Calidad</strong> de valores faltantes y la corrección de tipos de datos, culminando con la <strong>Tranformación de variables y nombres al español</strong> para facilitar la interpretabilidad. Posteriormente, la <strong>Carga y análisis gráfico de los datos</strong> permitió realizar el <strong>Análisis de clientes que abandonan con respecto a otras variantes</strong>. Como resultado principal, se determinó una tasa de Churn del <strong>26.5%</strong> y se identificó que el <strong>Contrato Mensual</strong> es el predictor más fuerte.</li>
+                            </p>
+                    </ul>
+                    <h4><i class="fas fa-brain"></i> Parte II: Modelado Predictivo y Optimización Estratégica</h4>
+                    
+
+                    <ul>
+                            <p>
+                                <li>Esta fase aplicó técnicas de <strong>Machine Learning</strong> para convertir los <strong>insights</strong> del EDA en una herramienta predictiva. Comenzó con la <strong>Preparación de datos</strong> mediante la <strong>Importación de librerías</strong> y la <strong>Extracción del archivo tratado en parte 1</strong>. Se procedió con la <strong>Eliminación de columnas o información irrelevante</strong> y el <strong>Tratamiento de datos binarios</strong>.</li>
+                            </p>
+                            <p>
+                                <li>Para el modelado, se realizó la <strong>Codificación de variables categóricas con OneHotEncoder</strong>. Se analizó la <strong>Correlación entre las variables</strong> y se realizó la <strong>Detección de Multinolinealidad</strong>. Tras un <strong>Análisis Exploratorio de variables categóricas y numéricas</strong>, se procedió a la <strong>Separación de Variables Explicativas y Respuesta / Entrenamiento, Validación y Prueba</strong> y la <strong>Normalización de los datos</strong> (con <strong>MinMaxScaler</strong>) para los modelos.</li>
+                            </p>
+                            
+                            <p>
+                                <li>El <strong>Entrenamiento y Evaluación de Modelos</strong> (Regresión Logística, Árbol de Decisión y Random Forest) buscó el mejor desempeño. Esta etapa fue rigurosa, abordando la <strong>Matriz de Confusión</strong>, el <strong>Informe de Métricas</strong> (como el <strong>Recall</strong> y <strong>Precisión</strong>), y las <strong>Curvas de Rendimiento (ROC y AUC, Precisión vs Recall)</strong>. La <strong>Validación con K-Fold y Stratified K-Fold</strong> garantizó la robustez de los resultados.</li>
+                            </p>
+
+                            <p>
+                                <li>El modelo <strong>Random Forest</strong> fue elegido como el <strong>Champion</strong> (<strong>Accuracy > 80%</strong>) y se optimizó mediante <strong>Optimización de hiperparámetros con GridSearchCV</strong>. La decisión más crítica fue el <strong>Ajuste de umbrales</strong> (evaluando 0.3, 0.4 y 0.5), donde se eligió el umbral más bajo (ej. <strong>0.3</strong>) para <strong>maximizar la Sensibilidad (Recall)</strong>. Esta decisión estratégica minimiza los <strong>Falsos Negativos</strong>, priorizando la necesidad de negocio de reducir la pérdida de ingresos.</li>
+                            </p>
+                            <p>
+                                <li>El proyecto finalizó <strong>Trabajando con el modelo y los parámetros escogidos</strong>, <strong>Guardando el Modelo Champion</strong> y realizando la <strong>Predicción y prueba de Nuevos Registros</strong> para validar su aplicabilidad práctica.</li>
+                            </p>
+                    </ul>
+
+                    <h4><i class="fas fa-check-circle"></i> Conclusión Profesional: Valor y Rigor Técnico</h4>
+                    <ul>
+                        <li><span class="data-highlight">Dominio del Ciclo de Vida:</span> Ejecución completa de un proyecto de Data Science, desde ETL (<strong>Normalización JSON</strong>) hasta la <strong>Optimización de Hiperparámetros</strong> y la <strong>Decisión Estratégica de Umbrales</strong>.</li>
+                        <li><span class="data-highlight">Pensamiento Estratégico:</span> Capacidad para alinear el rendimiento técnico del modelo (la priorización del <strong>Recall</strong>) con el objetivo financiero (<strong>minimizar la pérdida de ingresos</strong>), lo que asegura que el modelo es operativo y valioso.</li>
+                        <li><span class="data-highlight">Modelo Operacional:</span> El resultado es un modelo <strong>Random Forest</strong> validado y listo para generar <strong>sistemas de alerta temprana</strong> y dirigir estrategias de retención.</li>
+                    </ul>
+                    
+                    <h4><i class="fas fa-code"></i> Tecnologías y Herramientas:</h4>
+                    <ul>
+                        <li><span class="data-highlight">Lenguaje:</span> Python</li>
+                        <li><span class="data-highlight">Bibliotecas:</span> <strong>Pandas</strong> (ETL, Limpieza), <strong>NumPy</strong>, <strong>Matplotlib/Seaborn</strong> (EDA), y <strong>Scikit-learn</strong> (Modelado, Validación, GridSearch).</li>
+                        <li><span class="data-highlight">Entorno:</span> Jupyter Notebooks / Google Colab.</li>
+                    </ul>
+                    
+                    <div class="project-links">
+                        <li>
+                        <span class="data-highlight"><i class="fas fa-link"></i> Repositorios:
+                        <a href="https://github.com/DanielRaiicHu/TelecomX/blob/main/TelecomX.ipynb" target="_blank">Notebook Parte I (Análisis Exploratorio)</a> | 
+                        <a href="https://github.com/DanielRaiicHu/telecom_x_2/blob/main/telecom_x_2.ipynb" target="_blank">Notebook Parte II (Modelado Predictivo)</a></span>
+                        </li>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

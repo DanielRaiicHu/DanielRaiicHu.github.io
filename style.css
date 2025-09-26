@@ -1,0 +1,260 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #004d99; /* Azul oscuro */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.2em;
+}
+
+h2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #007bff; /* Azul brillante */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos de la cabecera */
+.header {
+    background-color: #e6f2ff; /* Azul claro */
+    padding: 40px 0;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.profile-info {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-links a {
+    margin: 0 10px;
+    font-size: 1.1em;
+    display: inline-block;
+    color: #333;
+}
+
+.contact-links a:hover {
+    color: #007bff;
+}
+
+.contact-links i {
+    margin-right: 5px;
+}
+
+/* Estilos de las secciones */
+.section {
+    background: #fff;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
+}
+
+.certificados li{
+    list-style: none;
+}
+
+/* Estilos para reducir la separación en la sección de educación */
+.education-item h3,
+.education-item h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.project-item, .experience-item, .education-item {
+    margin-bottom: 20px;
+}
+
+.project-item ul, .experience-item ul, .education-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-item li, .experience-item li, .education-item li {
+    margin-bottom: 5px;
+}
+
+.project-item li i, .experience-item li i, .education-item li i {
+    color: #004d99;
+    margin-right: 8px;
+}
+
+/* Estilos para la sección de habilidades */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill-category h3 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-category li {
+    margin-bottom: 8px;
+}
+
+.skill-category i {
+    color: #004d99;
+    margin-right: 10px;
+}
+
+/* Media Queries para diseño responsivo */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .contact-links a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+strong {
+    color: #004d99;
+}
+
+/* Estilos para la barra de navegación */
+.main-nav {
+    background-color: #004d99;
+    padding: 10px 0;
+}
+
+.main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    background-color: #007bff;
+    text-decoration: none;
+}
+
+/* Estilo para alinear el texto de la segunda línea debajo del título del curso */
+.centered-text {
+    display: block;
+    margin-left: 20px; /* Este valor ajusta el espacio desde el borde izquierdo del <li> */
+}
+
+.formaciones-destacadas {
+    display: block;
+    margin-left: 20px;
+}
+
+
+/* Puntos solo para la Experiencia Laboral */
+.experience-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-left: 30px;
+}
+
+
+.experience-item small {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-left: 15px;
+}
+
+
+.education-item strong{
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-left: 15px;
+    color: #004d99;
+}
+
+
+.achievement-item h4{
+    margin-left: 25px;
+    color: #004d99;
+}
+
+.project-item h4{
+    color: #004d99;
+}
+
+.project-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-left: 30px;
+}
+
+.project-links strong{
+    color: #004d99;
+}
+
+/*portafolio*/
+.project-context strong {
+    font-weight: 700;
+    color: #333;
+}
+
+.project-item strong {
+    font-weight: 700;
+    color: #333;
+}
+
+
+.data-highlight {
+    font-weight: bolder; 
+}
+
+.project-item li .data-highlight{
+    color: #004d99;
+}
+
